@@ -6,7 +6,7 @@ let statusBar: vscode.StatusBarItem;
 export function activate(context: vscode.ExtensionContext) {
 	statusBar = vscode.window.createStatusBarItem(vscode.StatusBarAlignment.Right, 100);
 	statusBar.hide();
-	timer = setInterval(remind, 1000 * 60);
+	timer = setInterval(remind, 1000 * 60 * 15);
 	remind();
 	context.subscriptions.push(statusBar);
 }
